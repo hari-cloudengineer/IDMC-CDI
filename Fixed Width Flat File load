@@ -1,0 +1,14 @@
+Quite often we see csv either with comma or pipe seperated in real time scenario.
+But there are cases where certain source systems can send fixed width flat files.
+How to handle such files in IDMC CDI and load it to a table in relational database ?
+
+First: We need to create the template of fixed width file format.
+--> Click on new --> Components --> Fixed width file format --> create
+--> Fill in the necessary details like name, location to save ( default ) , description if any
+--> connection details --> connect to the location where sample file is stored --> sample file
+---> Manually select the length for each column --> Click on edit columns and give names for each column header.
+With this our template is ready
+
+While configuring the source in the mapping --> go to formatting options --> select flat file type as fixed width and give the template which we created as reference.
+
+By this steps we can process the fixed width flat files into rdbms or any other target systems by using IDMC CDI.
